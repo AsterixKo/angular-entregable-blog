@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-entregable-blog"
+    }
+  },
+  "defaultProject": "angular-entregable-blog",
+  "cli": {
+    "analytics": false
+  }
 }

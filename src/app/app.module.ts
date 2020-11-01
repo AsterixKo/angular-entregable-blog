@@ -9,6 +9,7 @@ import { LogoutComponent } from './shared/components/logout/logout.component';
 import { PublicationsComponent } from './core/components/publications/publications.component';
 import { PublicationComponent } from './core/components/publication/publication.component';
 import { PublishComponent } from './core/components/publish/publish.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { PublishComponent } from './core/components/publish/publish.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

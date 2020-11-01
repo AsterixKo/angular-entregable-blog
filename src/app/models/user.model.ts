@@ -3,23 +3,23 @@ export class UserModel {
     _password: string;
 
     constructor(email: string, password: string) {
-        this.email = email;
-        this.password = password;
+        this._email = email;
+        this._password = password;
     }
 
     get email(): string {
-        return this.email;
+        return this._email;
     }
 
     set email(email: string) {
-        this.email = email;
+        this._email = email;
     }
 
     get password(): string {
-        return this.password;
+        return this._password;
     }
 
     set password(password: string) {
-        this.password = password;
+        this._password = password;
     }
 }

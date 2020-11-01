@@ -1,27 +1,8 @@
 # AngularEntregableBlog
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.7.
+Crea una app para montar un mini Blog con Angular desde cero, en la que incluyas:
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Una página que muestre todas las publicaciones del Blog. Cada publicación debe tener un título, una imagen y un contenido en forma de texto. También deben tener etiquetas (tags) para clasificar la publicación (Ej: programación, tecnología…). Nota: Las etiquetas simplemente se muestran. No tienen ninguna funcionalidad ni enlace.
+Una página de login que de acceso a la página de Publicar Nuevo Post.
+Una página que permita publicar un nuevo post en el blog (el usuario tiene que estar identificado para poder publicar). Para poner la imagen, el usuario debe poder escribir la URL de la imagen en Internet. Debe poder añadir etiquetas de forma dinámica (una, dos, ninguna…) con el texto que considere.
+Puedes utilizar librerías como Bootstrap para el diseño. A modo de inspiración, puedes utilizar https://medium.com/ para hacer un diseño parecido.

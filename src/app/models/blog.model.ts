@@ -1,8 +1,8 @@
 export class BlogModel {
-    _title: string;
-    _image: string;
-    _text: string;
-    _tags: string[];
+    private _title: string;
+    private _image: string;
+    private _text: string;
+    private _tags: string[];
 
     constructor(title: string, image: string, text: string, tags: string[]) {
         this._title = title;
@@ -31,7 +31,7 @@ export class BlogModel {
         return this._text;
     }
 
-    set text(text) {
+    set text(text: string) {
         this._text = text;
     }
 

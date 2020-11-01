@@ -1,1 +1,68 @@
-<p>publish works!</p>
+<h1>Nueva entrada de blog</h1>
+
+<hr>
+
+<form autocomplete="off" [formGroup]="forma" (ngSubmit)="saveForm()">
+
+  <div class="container">
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Título</label>
+      <div class="col-8">
+        <input class="form-control" type="text" placeholder="Escribe tu título" formControlName="titulo"
+          [class.is-invalid]="isInvalid('titulo')">
+        <small class="form-text text-danger" *ngIf="isInvalid('titulo')">El título debe de tener al menos 3
+          letras</small>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Imagen</label>
+      <div class="col-8">
+        <input class="form-control" type="text" placeholder="Escribe tu url de imagen" formControlName="imagen"
+          [class.is-invalid]="isInvalid('imagen')">
+        <small class="form-text text-danger" *ngIf="isInvalid('imagen')">La imagen es requerida</small>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Texto</label>
+      <div class="col-8">
+        <input class="form-control" type="text" placeholder="Escribe tu texto" formControlName="texto"
+          [class.is-invalid]="isInvalid('texto')">
+        <small class="form-text text-danger" *ngIf="isInvalid('texto')">El texto es requerido</small>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <div class="col-8">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>Etiqueta</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody formArrayName="etiquetas">
+            <tr *ngFor="let tag of tags.controls; let i=index">
+              <td>{{i+1}}</td>
+              <td><input type="text" class="form-control" [formControlName]="i" placeholder="Escribe tu etiqueta"></td>
+              <td><button type="button" (click)="deleteTag(i)" class="btn btn-danger">Borrar</button></td>
+            </tr>
+          </tbody>
+        </table>
+        <button type="button" (click)="addTag()" class="btn btn-primary btn-block mb-5">Añadir</button>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <button type="submit" class="btn btn-block btn-primary">Enviar</button>
+    </div>
+  </div>
+
+</form>
+
+<!-- <div>
+  <p>{{this.forma.status}}</p>
+  <p>{{this.forma.value | json}}</p>
+</div> -->

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { BlogModel } from 'src/app/models/blog.model';
 
 @Component({
   selector: 'app-publication',
@@ -7,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublicationComponent implements OnInit {
 
+  @Input() blog: BlogModel = new BlogModel('', '', '', []);
+  
   constructor() { }
 
   ngOnInit(): void {

@@ -1,1 +1,6 @@
-<p>publications works!</p>
+<div class="container">
+  <h1>Publications:</h1>
+  <div class="containter" *ngFor="let entry of listBlog">
+    <app-publication [blog]="entry"></app-publication>
+  </div>
+</div>

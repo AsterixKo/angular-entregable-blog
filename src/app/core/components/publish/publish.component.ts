@@ -57,7 +57,7 @@ export class PublishComponent implements OnInit {
     console.log('blog:', blog);
 
     this.blogService.addNewEntry(blog);
-
+    this.forma.reset();
   }
 
   isInvalid(name: string): boolean {
